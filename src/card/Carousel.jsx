@@ -14,8 +14,21 @@ class Carousel extends React.Component {
   }
 
   // requires active item to ensure you can scroll
+  // prevents going to the last and first item to create infinite scrolling
   changeActiveItem = (activeItemIndex) => {
-    this.setState({ activeItemIndex });
+    const { items } = this.props;
+
+    switch (activeItemIndex) {
+      case 1:
+        this.setState({ activeItemIndex: items.length - 3 });
+        break;
+      case items.length - 2:
+        this.setState({ activeItemIndex: 2 });
+        break;
+      default:
+        this.setState({ activeItemIndex });
+        break;
+    }
   };
 
   render() {

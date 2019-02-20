@@ -44,6 +44,10 @@ export default () => {
   const title = 'Hear from our Students';
   const subtitle = 'Learn more about us through the lens of our Code Campus family';
 
+  // Added an empty element to create a pseudo card at the top and bottom of the list.
+  // This is to enable a little hack of ours that does infinite scrolling.
+  items.push({});
+
   for (let i = 0; i <= 10; i += 1) {
     items.push({
       text: `"I had so much fun at this course learning <br /> to build my own video game ${i}"`,
@@ -52,6 +56,8 @@ export default () => {
       program: 'Multiple Programme',
     });
   }
+
+  items.push({});
 
   return (
     <Section>

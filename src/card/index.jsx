@@ -10,15 +10,19 @@ const Container = styled.div`
 export default () => {
   const items = [];
 
-  for (let i = 0; i <= 10; i += 1) {
+  items.push({});
+
+  for (let i = 1; i <= 10; i += 1) {
     items.push({
       img: './image.jpg',
-      title: 'Camp News',
+      title: `Camp News ${i}`,
       excerpt:
         'This is a sample header that is 100 characters long. The max number of characters that can fit here.',
       link: 'https://google.com',
     });
   }
+
+  items.push({});
 
   return (
     <Container>
