@@ -2,8 +2,8 @@ import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import PropTypes from 'prop-types';
 
-import { LeftButton, RightButton } from './Chevron';
-import Item from './Item';
+import { LeftButton, RightButton } from '../chevron';
+import Card from './Card';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class Carousel extends React.Component {
   render() {
     const { activeItemIndex } = this.state;
     const { items, cards } = this.props;
-    const children = items.map(item => <Item {...item} key={Date.now()} />);
+    const children = items.map(item => <Card {...item} key={Date.now()} />);
 
     return (
       <ItemsCarousel

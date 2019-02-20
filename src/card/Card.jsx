@@ -4,13 +4,10 @@ import PropTypes from 'prop-types';
 
 const BORDERRADIUS = '30px';
 
-// 1. Make both chevron visible at start.
-// 2. Space the chevron more.
-
-const Item = ({
+const Card = ({
   img, link, title, excerpt,
 }) => {
-  const ItemCarousel = styled.div`
+  const CardItem = styled.div`
     width: 270px;
     height: 450px;
     border-radius: ${BORDERRADIUS};
@@ -52,7 +49,7 @@ const Item = ({
   `;
 
   return (
-    <ItemCarousel>
+    <CardItem>
       <div className="CardImage" />
       <div>
         <div className="CardTitle">{title.toUpperCase()}</div>
@@ -61,22 +58,22 @@ const Item = ({
           Read more
         </a>
       </div>
-    </ItemCarousel>
+    </CardItem>
   );
 };
 
-Item.defaultProps = {
+Card.defaultProps = {
   img: '',
   link: '',
   title: '',
   excerpt: '',
 };
 
-Item.propTypes = {
+Card.propTypes = {
   img: PropTypes.string,
   link: PropTypes.string,
   title: PropTypes.string,
   excerpt: PropTypes.string,
 };
 
-export default Item;
+export default Card;
