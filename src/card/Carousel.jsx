@@ -9,7 +9,7 @@ class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeItemIndex: 0,
+      activeItemIndex: 2,
     };
   }
 
@@ -25,14 +25,8 @@ class Carousel extends React.Component {
 
     return (
       <ItemsCarousel
-        // Carousel configurations
         numberOfCards={cards}
-        gutter={0}
-        showSlither={false}
-        firstAndLastGutter
-        freeScrolling={false}
         slidesToScroll={1}
-        // Active item configurations
         requestToChangeActive={this.changeActiveItem}
         activeItemIndex={activeItemIndex}
         activePosition="center"

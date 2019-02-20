@@ -58,10 +58,7 @@ export default () => {
       <h1>{title}</h1>
       <h4>{subtitle}</h4>
       <Container>
-        <Carousel
-          items={items}
-          button={{ link: 'https://google.com', text: 'Meet Our Students' }}
-        />
+        <Carousel items={items} />
       </Container>
       <div className="QuoteButton">
         <button type="button" onClick={handleClick}>
